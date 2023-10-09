@@ -193,7 +193,10 @@ public class MovieUpdate extends HttpServlet {
 				e.printStackTrace();
 			}
 
-			response.sendRedirect("/bsc/AddNewMovie");
+		
+			RequestDispatcher rd = request.getRequestDispatcher("/bsc/AddMovie");
+
+			rd.forward(request, response);
 
 			out.println("</body>");
 			out.println("</html>");
